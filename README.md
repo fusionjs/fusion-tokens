@@ -44,6 +44,4 @@ Creates a special DI token with a default value associated with it
 
 `import {FetchToken} from 'fusion-tokens';`
 `import {LoggerToken} from 'fusion-tokens';`
-`import {ReduxToken} from 'fusion-tokens';`
 `import {SessionToken} from 'fusion-tokens';`
-`import {EventEmitterToken} from 'fusion-tokens';`
