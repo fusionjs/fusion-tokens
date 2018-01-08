@@ -8,7 +8,12 @@ declare module 'fusion-types' {
   ): Default;
 
   // tokens
-  declare export var GenericSessionToken: {
+  declare export var FetchToken: (
+    input: string | Request,
+    init?: RequestOptions
+  ) => Promise<Response>;
+
+  declare export var SessionToken: {
     // TODO: sync this up with fusion-core types?
     from(
       ctx: Object
@@ -18,8 +23,13 @@ declare module 'fusion-types' {
     },
   };
 
-  declare export var FetchToken: (
-    input: string | Request,
-    init?: RequestOptions
-  ) => Promise<Response>;
+  declare export var LoggerToken: {
+    log(level: string, arg: any): void,
+    error(arg: any): void,
+    warn(arg: any): void,
+    info(arg: any): void,
+    verbose(arg: any): void,
+    debug(arg: any): void,
+    silly(arg: any): void,
+  };
 }
