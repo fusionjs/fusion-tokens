@@ -14,7 +14,6 @@ declare module 'fusion-types' {
   ) => Promise<Response>;
 
   declare export var SessionToken: {
-    // TODO: sync this up with fusion-core types?
     from(
       ctx: Object
     ): {
