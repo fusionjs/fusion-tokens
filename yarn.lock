@@ -405,7 +405,7 @@
   dependencies:
     "@babel/helper-builder-binary-assignment-operator-visitor" "7.0.0-beta.31"
 
-"@babel/plugin-transform-flow-strip-types@7.0.0-beta.38", "@babel/plugin-transform-flow-strip-types@^7.0.0-beta.36":
+"@babel/plugin-transform-flow-strip-types@^7.0.0-beta.36":
   version "7.0.0-beta.38"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.0.0-beta.38.tgz#a169de5b1dc6ac87f95e41f4cebc34d5c188ab9a"
   dependencies:
@@ -667,8 +667,8 @@
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
 
 "@types/node@^9.3.0":
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.3.0.tgz#3a129cda7c4e5df2409702626892cb4b96546dd5"
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.0.tgz#b85a0bcf1e1cc84eb4901b7e96966aedc6f078d1"
 
 "@types/rimraf@^0.0.28":
   version "0.0.28"
@@ -1413,9 +1413,9 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-universal-package@3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/create-universal-package/-/create-universal-package-3.2.5.tgz#6b4e9106000e2ebf372e6f09badf4ccf74b9d94a"
+create-universal-package@3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/create-universal-package/-/create-universal-package-3.2.6.tgz#8269a7ac8ad5d1e13139a36f18d139fb48000483"
   dependencies:
     "@babel/core" "^7.0.0-beta.36"
     "@babel/plugin-transform-flow-strip-types" "^7.0.0-beta.36"
@@ -1599,8 +1599,8 @@ doctrine@^2.0.2, doctrine@^2.1.0:
     esutils "^2.0.2"
 
 domain-browser@^1.1.1:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
 
 draftlog@^1.0.12:
   version "1.0.12"

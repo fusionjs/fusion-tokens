@@ -2,10 +2,7 @@
   "name": "fusion-tokens",
   "description": "Dependency injection tokens for FusionJS",
   "version": "0.0.5",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["dist", "src"],
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "browser": {
@@ -20,9 +17,8 @@
     "./dist/browser.es2015.es.js": "./dist/browser.es2017.es.js"
   },
   "devDependencies": {
-    "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.38",
     "babel-eslint": "8.2.1",
-    "create-universal-package": "3.2.5",
+    "create-universal-package": "3.2.6",
     "eslint": "4.16.0",
     "eslint-config-fusion": "0.2.1",
     "eslint-plugin-cup": "1.0.0",
@@ -41,7 +37,8 @@
     "lint": "eslint . --ignore-path .gitignore",
     "transpile": "npm run clean && cup build",
     "build-test": "rm -rf dist-tests && cup build-tests",
-    "just-test": "unitest --browser=dist-tests/browser.js --node=dist-tests/node.js",
+    "just-test":
+      "unitest --browser=dist-tests/browser.js --node=dist-tests/node.js",
     "test": "npm run build-test && npm run just-test",
     "cover": "npm run build-test && npm run just-cover",
     "just-cover": "nyc --reporter=html npm run just-test",
