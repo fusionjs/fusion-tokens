@@ -38,7 +38,7 @@
     "unitest": "2.1.1"
   },
   "peerDependencies": {
-    "fusion-core": "0.3.1"
+    "fusion-core": "^0.3.1"
   },
   "scripts": {
     "clean": "rm -rf dist",
