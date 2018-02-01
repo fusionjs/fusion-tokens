@@ -1,19 +1,34 @@
 // @flow
 
 // Helpers
-export function createToken(name: string): any {
-  // $FlowFixMe
-  return () => {
-    throw new Error(`Missing required value for token: ${name}.`);
-  };
+export const TokenType = {
+  Required: 0,
+  Optional: 1,
+};
+function Ref() {}
+class TokenImpl {
+  name: string;
+  ref: mixed;
+  type: $Values<typeof TokenType>;
+
+  constructor(name: string, ref: mixed) {
+    this.name = name;
+    this.ref = ref || new Ref();
+    this.type = ref ? TokenType.Optional : TokenType.Required;
+    if (!ref) {
+      // $FlowFixMe
+      this.optional = new TokenImpl(name, this.ref);
+    }
+  }
 }
 
-export function createOptionalToken<Default>(
-  name: string,
-  defaultValue: Default
-): Default {
+export type Token<T> = {
+  (): T,
+  optional: () => ?T,
+};
+export function createToken(name: string): Token<any> {
   // $FlowFixMe
-  return () => defaultValue;
+  return new TokenImpl(name);
 }
 
 // Tokens
@@ -21,7 +36,7 @@ type Fetch = (
   input: string | Request,
   init?: RequestOptions
 ) => Promise<Response>;
-export const FetchToken: Fetch = (createToken('FetchToken'): any);
+export const FetchToken: Token<Fetch> = createToken('FetchToken');
 
 type Session = {
   from(
@@ -31,7 +46,7 @@ type Session = {
     set(keyPath: string, val: any): void,
   },
 };
-export const SessionToken: Session = (createToken('SessionToken'): any);
+export const SessionToken: Token<Session> = createToken('SessionToken');
 
 type Logger = {
   log(level: string, arg: any): void,
@@ -42,4 +57,4 @@ type Logger = {
   debug(arg: any): void,
   silly(arg: any): void,
 };
-export const LoggerToken: Logger = (createToken('LoggerToken'): any);
+export const LoggerToken: Token<Logger> = createToken('LoggerToken');
