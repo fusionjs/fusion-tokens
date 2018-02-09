@@ -3,8 +3,10 @@
 // Helpers
 export function createToken(name: string): any {
   // $FlowFixMe
+  const created = new Error('Created thing here');
   return () => {
-    throw new Error(`Missing required value for token: ${name}.`);
+    throw created;
+    // throw new Error(`Missing required value for token: ${name}.`);
   };
 }
 
