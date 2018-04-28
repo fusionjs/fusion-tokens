@@ -3,7 +3,16 @@
 import {createToken} from 'fusion-core';
 import type {Context, Token} from 'fusion-core';
 
-// Tokens
+export type BodyParserOptions = {
+  enableTypes?: string[],
+  encoding?: string,
+  formLimit?: string,
+  jsonLimit?: string,
+  textLimit?: string,
+  extendTypes?: {[typeName: string]: string[]}
+};
+export const BodyParserOptionsToken: Token<BodyParserOptions> = createToken('BodyParserOptionsToken');
+
 export type Fetch = (
   input: string | Request,
   init?: RequestOptions
