@@ -57,7 +57,7 @@ By default `jsonLimit` and `textLimit` are `1mb`, `formLimit` is `56kb`. To chan
 {jsonLimit: '10mb'}
 ```
 
-Check [here](https://github.com/koajs/bodyparser) to see more detail.
+Check [koa-bodyparser](https://github.com/koajs/bodyparser) to see more detail.
 
 #### `FetchToken`
 
