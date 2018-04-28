@@ -9,9 +9,11 @@ export type BodyParserOptions = {
   formLimit?: string,
   jsonLimit?: string,
   textLimit?: string,
-  extendTypes?: {[typeName: string]: string[]}
+  extendTypes?: {[typeName: string]: string[]},
 };
-export const BodyParserOptionsToken: Token<BodyParserOptions> = createToken('BodyParserOptionsToken');
+export const BodyParserOptionsToken: Token<BodyParserOptions> = createToken(
+  'BodyParserOptionsToken'
+);
 
 export type Fetch = (
   input: string | Request,
