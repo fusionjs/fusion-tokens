@@ -22,11 +22,11 @@ export const SessionToken: Token<Session> = createToken('SessionToken');
 
 export type Logger = {
   log(level: string, arg: any): void,
-  error(arg: any): void,
-  warn(arg: any): void,
-  info(arg: any): void,
-  verbose(arg: any): void,
-  debug(arg: any): void,
-  silly(arg: any): void,
+  error(arg: any, error: any): void,
+  warn(arg: any, arg: any): void,
+  info(arg: any, arg: any): void,
+  verbose(arg: any, arg: any): void,
+  debug(arg: any, arg: any): void,
+  silly(arg: any, arg: any): void,
 };
 export const LoggerToken: Token<Logger> = createToken('LoggerToken');
