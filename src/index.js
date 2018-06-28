@@ -28,5 +28,8 @@ export type Logger = {
   verbose(arg: any, arg: any): void,
   debug(arg: any, arg: any): void,
   silly(arg: any, arg: any): void,
+  +access?: (arg: any, arg: any) => void,
+  +fatal?: (arg: any, arg: any) => void,
+  +trace?: (arg: any, arg: any) => void,
 };
 export const LoggerToken: Token<Logger> = createToken('LoggerToken');
