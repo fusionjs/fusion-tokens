@@ -13,6 +13,7 @@ This package provides utilities to create named tokens, as well as common tokens
 
 * [Installation](#installation)
 * [API](#api)
+  * [BodyParserOptionsToken](#bodyparseroptionstoken)
   * [FetchToken](#fetchtoken)
   * [LoggerToken](#loggertoken)
   * [SessionToken](#sessiontoken)
@@ -28,6 +29,35 @@ yarn add fusion-tokens
 ---
 
 ### API
+
+#### `BodyParserOptionsToken`
+
+```js
+import {BodyParserOptionsToken} from 'fusion-tokens';
+```
+
+A token for [koa-bodyparser](https://github.com/koajs/bodyparser) options.
+
+##### Types
+
+```flow
+type BodyParserOptions = {
+  enableTypes?: string[],
+  encoding?: string,
+  formLimit?: string,
+  jsonLimit?: string,
+  textLimit?: string,
+  extendTypes?: {[typeName: string]: string[]}
+};
+```
+
+By default `jsonLimit` and `textLimit` are `1mb`, `formLimit` is `56kb`. To change `jsonLimit` to `10mb` you can set
+
+```js
+{jsonLimit: '10mb'}
+```
+
+Check [koa-bodyparser](https://github.com/koajs/bodyparser) to see more detail.
 
 #### `FetchToken`
 
