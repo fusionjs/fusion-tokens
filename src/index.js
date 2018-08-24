@@ -20,6 +20,14 @@ export type Session = {
 };
 export const SessionToken: Token<Session> = createToken('SessionToken');
 
+export type Cache = {
+  get(key: string): Promise<any>,
+  del(key: string): Promise<any>,
+  set(key: string, val: any): Promise<any>,
+};
+
+export const CacheToken: Token<Cache> = createToken('CacheToken');
+
 type LogCallback = (
   error?: any,
   level?: string,
