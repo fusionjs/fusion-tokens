@@ -21,9 +21,9 @@ export type Session = {
 export const SessionToken: Token<Session> = createToken('SessionToken');
 
 export type Cache = {
-  get(key: string): Promise<any>,
-  del(key: string): Promise<any>,
-  set(key: string, val: any): Promise<any>,
+  get(key: string): Promise<mixed>,
+  del(key: string): Promise<mixed>,
+  set(key: string, val: any): Promise<mixed>,
 };
 
 export const CacheToken: Token<Cache> = createToken('CacheToken');
